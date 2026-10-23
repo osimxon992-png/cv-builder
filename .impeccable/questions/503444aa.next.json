@@ -1,0 +1,231 @@
+{
+ "title": "CV Builder uchun vizual dunyoni tanlang",
+ "question": "Tasodif \"Pochta markasi\" yo'nalishini tanladi. Shuni qoldiring, muqobilini oling yoki qayta aylantiring.",
+ "options": [
+  {
+   "id": "assigned",
+   "label": "Pochta markasi",
+   "kicker": "THE ROLL",
+   "lineage": "O'zbek pochta markalari, avia-konvertlar, dumaloq pochta muhrlari",
+   "thesis": "Rezyume — ish beruvchiga jo'natiladigan xat: shablonlar marka varag'i, CV tili esa pochta muhri.",
+   "palette": [
+    "#1d2fa3",
+    "#e2401c",
+    "#0f9b8e",
+    "#f2b705",
+    "#4b2a7b",
+    "#f7f8fb"
+   ],
+   "materials": [
+    "perforatsiyali marka varaqlari",
+    "avia-konvert chevron chegarasi",
+    "binafsha pochta muhri siyohi"
+   ],
+   "viewport": "Avia-chevron bilan o'ralgan konvert sahifa: 'Kimdan' blokida ismingizni yozasiz va CV tilini uchta markadan tanlaysiz, 'Jo'natish' muharrirni ochadi; yonida muhr bo'lim nomlarini tanlangan tilda bosadi.",
+   "risk": "Pochta metaforasi haddan oshsa, jiddiy CV vositasi o'yinchoqqa o'xshab qoladi.",
+   "raised": [
+    {
+     "from": "challenger-phosphor",
+     "raise": "Holat xabarlari (saqlandi, PDF tayyor) toast emas, sahifaga bosilgan muhr bo'lib chiqadi."
+    },
+    {
+     "from": "challenger-ink",
+     "raise": "Eng yangi CV eng to'q siyohda, eskilari xiraroq: yangilik siyoh zichligida ko'rinadi."
+    },
+    {
+     "from": "challenger-hoffmann",
+     "raise": "Marka varag'i qat'iy birlikda: ekran kengligiga qarab butun markalar qayta joylashadi, hech biri cho'zilmaydi."
+    },
+    {
+     "from": "challenger-goods",
+     "raise": "Har bir shablon markasi doimiy 'mebel'ga ega: nomi, bepul/premium nominali, bir qatorli 'kim uchun'."
+    },
+    {
+     "from": "challenger-citynight",
+     "raise": "Avia-chevron chegarasi sahifa bo'ylab bitta o'q bo'lib o'tadi va barcha bo'limlarni bog'laydi."
+    },
+    {
+     "from": "challenger-cityfold",
+     "raise": "8 qadamning har biri o'z marka rangiga ega: qaysi bo'limda ekaningiz rangdan bilinadi."
+    }
+   ]
+  },
+  {
+   "id": "model-pick",
+   "label": "Toshkent metrosi",
+   "kicker": "IMPECCABLE’S PICK",
+   "lineage": "Toshkent metro bekatlari, liniya ranglari, ikki tilli bekat yozuvlari",
+   "thesis": "8 qadam — 8 bekat: CV yozish metro liniyasi bo'ylab sayohat, oxirgi bekat — PDF.",
+   "palette": [
+    "#d8232a",
+    "#1f5fbf",
+    "#1a9b4b",
+    "#a67c3d",
+    "#2a2a2e",
+    "#eef0f2"
+   ],
+   "materials": [
+    "marmar va granit",
+    "bronza bekat harflari",
+    "liniya xaritasi"
+   ],
+   "viewport": "Butun ekran bo'ylab liniya xaritasi, bekatlar CV bo'limlari, uch tilli bekat yozuvlari va 'Yo'lga chiqish' tugmasi.",
+   "risk": "Metro-xarita qadam ko'rsatkichi juda tanish UX metafora; ko'p loyihalar shunga keladi."
+  },
+  {
+   "id": "challenger-phosphor",
+   "label": "Fosfor terminal",
+   "verdict": "declined",
+   "lineage": "yashil fosforli terminal",
+   "thesis": "CV yozish — terminal bilan dialog.",
+   "palette": [
+    "#0a0f0a",
+    "#39ff6a",
+    "#1c7a35"
+   ],
+   "materials": [
+    "fosfor nur",
+    "skanlayn"
+   ],
+   "viewport": "Qora ekranda bitta monospace transkript.",
+   "case": "Talabalar terminal bilan o'zini bog'lamaydi; CV aniqligi yo'qoladi.",
+   "kept": "Holat xabarlari interfeys bezagi emas, sahifaga bosiladi.",
+   "risk": "Ishga ariza beruvchi uchun begona va qo'rqituvchi.",
+   "hero": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight-hero.webp"
+  },
+  {
+   "id": "challenger-ink",
+   "label": "Suminagashi siyoh havzasi",
+   "verdict": "declined",
+   "lineage": "yapon marmar siyoh san'ati",
+   "thesis": "Sahifa — suyuq siyoh yuzasi.",
+   "palette": [
+    "#1e2a5a",
+    "#2b2b2b",
+    "#f4f4f2"
+   ],
+   "materials": [
+    "siyoh",
+    "suv"
+   ],
+   "viewport": "Butun ekranli WebGL suyuqlik.",
+   "case": "Chiroyli, lekin CV yaratish vazifasini ko'rsatmaydi va telefonlarda og'ir.",
+   "kept": "Eng yangi narsa eng to'q siyohda.",
+   "risk": "Past darajadagi telefonlarda sekin.",
+   "hero": "https://impeccable.style/worlds/cards/medium-native-fluid-ink-basin-hero.webp"
+  },
+  {
+   "id": "challenger-hoffmann",
+   "label": "Hoffmann panjarasi",
+   "verdict": "declined",
+   "lineage": "Wiener Werkstätte metall ishlari",
+   "thesis": "Hamma narsa qat'iy kvadrat panjarada.",
+   "palette": [
+    "#ffffff",
+    "#111111",
+    "#b8b8b8"
+   ],
+   "materials": [
+    "kumush",
+    "qora lak"
+   ],
+   "viewport": "Kvadrat katakli qora-oq vitrina.",
+   "case": "Hashamatli Vena talabalarga yot; aniqlikda yaqin, auditoriyada yutqazadi.",
+   "kept": "Birlik hech qachon cho'zilmaydi, faqat qayta sanaladi.",
+   "risk": "Sovuq va elitar ko'rinadi.",
+   "hero": "https://impeccable.style/worlds/cards/design-canon-hoffmann-gridsmith-showroom-hero.webp"
+  },
+  {
+   "id": "challenger-goods",
+   "label": "Personajlar katalogi",
+   "verdict": "declined",
+   "lineage": "kawaii personaj mahsulotlari katalogi",
+   "thesis": "Shablonlar — ism va xarakterli personajlar.",
+   "palette": [
+    "#ffd6e0",
+    "#cdeffd",
+    "#fff1b8",
+    "#ff5c8a"
+   ],
+   "materials": [
+    "pastel",
+    "oq kontur"
+   ],
+   "viewport": "Reytingli pastel personajlar to'ri.",
+   "case": "Jiddiy ish arizasi uchun juda o'yinqaroq.",
+   "kept": "Har bir element doimiy nom plitasi va bir qatorli izohga ega.",
+   "risk": "Professional ishonchni yo'qotadi.",
+   "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-character-goods-catalog-hero.webp"
+  },
+  {
+   "id": "challenger-citynight",
+   "label": "Yomg'irli tungi shahar",
+   "verdict": "declined",
+   "lineage": "tungi shahar manzarasi",
+   "thesis": "Sahifa — tun bo'yi shahar chiroqlari.",
+   "palette": [
+    "#1b2a6b",
+    "#0b0b10",
+    "#ffb347",
+    "#d9dde4"
+   ],
+   "materials": [
+    "neon",
+    "nam asfalt"
+   ],
+   "viewport": "Ko'k soatdagi osmono'par silueti.",
+   "case": "Kayfiyat beradi, CV vazifasini emas.",
+   "kept": "Bitta transport tomiri barcha qatlamlarni bog'laydi.",
+   "risk": "Mazmunsiz manzara bo'lib qoladi.",
+   "hero": "https://impeccable.style/worlds/cards/light-shadow-caustics-rain-night-cityscape-hero.webp"
+  },
+  {
+   "id": "challenger-cityfold",
+   "label": "Uxlayotgan shahar ko'rpasi",
+   "verdict": "declined",
+   "lineage": "syurreal tush xaritalari",
+   "thesis": "Shahar ko'rpaga aylanadi.",
+   "palette": [
+    "#14204a",
+    "#e8c25a",
+    "#f2f2f2"
+   ],
+   "materials": [
+    "kashta",
+    "ko'rpa choklari"
+   ],
+   "viewport": "Buklangan tungi shahar xaritasi.",
+   "case": "Metafora CV bilan bog'lanmaydi.",
+   "kept": "Har bir hudud o'z rangi bilan ajralib turadi.",
+   "risk": "Tushunarsiz va sekin.",
+   "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold-hero.webp"
+  }
+ ],
+ "reroll": {
+  "registers": [
+   "safer",
+   "bolder"
+  ]
+ },
+ "buildPath": {
+  "value": "code"
+ },
+ "canon": true,
+ "canonCard": {
+  "label": "Kategoriya standarti",
+  "thesis": "Canva / Novorésumé uslubidagi toza CV quruvchi, mukammal bajarilgan.",
+  "palette": [
+   "#ffffff",
+   "#111827",
+   "#2563eb",
+   "#f3f4f6"
+  ],
+  "materials": [
+   "toza to'r",
+   "qiyshaytirilgan CV maketlari"
+  ],
+  "viewport": "Chapda sarlavha va tugma, o'ngda CV namunalari, pastda afzalliklar kartochkalari.",
+  "risk": "Raqobatchilardan ataylab farqlanmaydi."
+ },
+ "steer": true
+}

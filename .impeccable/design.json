@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T22:40:00Z",
+  "title": "Design System: CV Builder",
+  "extensions": {
+    "colorMeta": {
+      "ink":         { "role": "primary", "displayName": "Indigo Depth", "canonical": "#0a1a33", "tonalRamp": ["oklch(15% 0.05 262)", "oklch(21% 0.05 262)", "oklch(30% 0.045 262)", "oklch(45% 0.04 262)", "oklch(60% 0.03 262)", "oklch(75% 0.02 262)", "oklch(88% 0.012 262)", "oklch(96% 0.005 262)"] },
+      "ink-current": { "role": "primary", "displayName": "Ink Current", "canonical": "#1e2d4a" },
+      "ink-soft":    { "role": "neutral", "displayName": "Dilute Ink", "canonical": "#4f5c72" },
+      "feather":     { "role": "neutral", "displayName": "Feathered Gray", "canonical": "#aeb6c2" },
+      "line":        { "role": "neutral", "displayName": "Hairline", "canonical": "#cdd4dd" },
+      "mist":        { "role": "neutral", "displayName": "Mist", "canonical": "#dde2e8" },
+      "desk":        { "role": "neutral", "displayName": "Desk", "canonical": "#eaedf1" },
+      "water":       { "role": "neutral", "displayName": "Still Water", "canonical": "#f6f7f9" },
+      "paper":       { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff" },
+      "danger":      { "role": "status", "displayName": "Cinnabar", "canonical": "#a3261b", "tonalRamp": ["oklch(25% 0.1 28)", "oklch(35% 0.13 28)", "oklch(45% 0.15 28)", "oklch(55% 0.15 28)", "oklch(68% 0.11 28)", "oklch(80% 0.06 28)", "oklch(90% 0.03 28)", "oklch(96% 0.015 28)"] },
+      "danger-tint": { "role": "status", "displayName": "Cinnabar Wash", "canonical": "#fbeceb" },
+      "ok":          { "role": "status", "displayName": "Pine", "canonical": "#1d6b4a" }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display", "purpose": "Home hero headline only, max 15ch." },
+      "headline": { "displayName": "Headline", "purpose": "Section and page h2; page h1 at clamp(2rem, 3vw + 1rem, 3rem), same weight." },
+      "title":    { "displayName": "Title", "purpose": "h3, card and template names." },
+      "body":     { "displayName": "Body", "purpose": "Running text; 16px under 760px; leads 1.12rem in dilute ink, max 58ch." },
+      "label":    { "displayName": "Label", "purpose": "Uppercase, tracked: buttons, nav, tabs, table heads, wordmark." }
+    },
+    "shadows": [
+      { "name": "sheet", "value": "0 1px 2px rgba(10, 26, 51, 0.08), 0 14px 30px -14px rgba(10, 26, 51, 0.35)", "purpose": "Template paper sheets." },
+      { "name": "lift", "value": "0 10px 24px -12px rgba(10, 26, 51, 0.6)", "purpose": "Primary button hover." },
+      { "name": "float", "value": "0 18px 40px -24px rgba(10, 26, 51, 0.45)", "purpose": "Panels resting on the basin." },
+      { "name": "modal", "value": "0 30px 80px -20px rgba(10, 26, 51, 0.5)", "purpose": "Dialogs, over an rgba(10, 26, 51, 0.55) backdrop." },
+      { "name": "focus-halo", "value": "0 0 0 3px rgba(10, 26, 51, 0.1)", "purpose": "Field focus, with ink border." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "All transitions and entrances; disabled under prefers-reduced-motion." },
+      { "name": "settle", "value": "1.2s, opacity 0 and translate 0 14px", "purpose": "Hero copy entrance, staggered 80ms." },
+      { "name": "surface", "value": "1.1s, opacity 0, blur 6px, translate 0 8px", "purpose": "Headings and toasts rising out of the ink." },
+      { "name": "state", "value": "0.2s", "purpose": "Color and border state changes." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "760px" },
+      { "name": "tablet", "value": "1000px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled ink action; the one main action per view.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Start my CV <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 20px; border-radius: 2px; border: 1px solid transparent; font-family: 'Jost', 'Noto Sans', sans-serif; font-weight: 500; font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:focus-visible { outline: 2px solid #0a1a33; outline-offset: 3px; } .ds-btn-primary { background: #0a1a33; color: #f6f7f9; } .ds-btn-primary svg { transition: translate 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: #1e2d4a; box-shadow: 0 10px 24px -12px rgba(10, 26, 51, 0.6); } .ds-btn-primary:hover svg { translate: 3px 0; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined ink; fills with ink on hover.",
+      "html": "<button class=\"ds-btn-secondary\">See all templates</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 20px; border-radius: 2px; border: 1px solid #0a1a33; background: transparent; color: #0a1a33; font-family: 'Jost', 'Noto Sans', sans-serif; font-weight: 500; font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: background-color 0.2s, color 0.2s; } .ds-btn-secondary:hover { background: #0a1a33; color: #f6f7f9; } .ds-btn-secondary:focus-visible { outline: 2px solid #0a1a33; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Quiet tertiary action in dilute ink.",
+      "html": "<button class=\"ds-btn-ghost\">Duplicate</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 20px; border-radius: 2px; border: 1px solid transparent; background: transparent; color: #4f5c72; font-family: 'Jost', 'Noto Sans', sans-serif; font-weight: 500; font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: background-color 0.2s, color 0.2s; } .ds-btn-ghost:hover { background: #eaedf1; color: #0a1a33; } .ds-btn-ghost:focus-visible { outline: 2px solid #0a1a33; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Paper field on water with hairline border and ink focus.",
+      "html": "<label class=\"ds-field\"><span>Full name</span><input class=\"ds-input\" placeholder=\"Aziza Karimova\"></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; font-family: 'Jost', 'Noto Sans', sans-serif; color: #0a1a33; } .ds-field span { font-weight: 500; font-size: 0.9rem; } .ds-input { font: inherit; font-size: 1rem; color: #0a1a33; background: #ffffff; border: 1px solid #cdd4dd; border-radius: 2px; padding: 10px 12px; transition: border-color 0.2s, box-shadow 0.2s; } .ds-input::placeholder { color: #6b7689; } .ds-input:hover { border-color: #aeb6c2; } .ds-input:focus { border-color: #0a1a33; box-shadow: 0 0 0 3px rgba(10, 26, 51, 0.1); outline: none; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Tracked uppercase links; active gets an ink hairline underline.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"is-active\">Home</a><a href=\"#\">Templates</a><a href=\"#\">My CVs</a><a href=\"#\">Pricing</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 4px; background: rgba(246, 247, 249, 0.94); border-bottom: 1px solid #cdd4dd; padding: 14px 0; font-family: 'Jost', 'Noto Sans', sans-serif; } .ds-nav a { padding: 8px 12px; color: #4f5c72; text-decoration: none; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; transition: color 0.2s; } .ds-nav a:hover { color: #0a1a33; } .ds-nav a.is-active { color: #0a1a33; box-shadow: inset 0 -1px 0 #0a1a33; } .ds-nav a:focus-visible { outline: 2px solid #0a1a33; outline-offset: 3px; }"
+    },
+    {
+      "name": "Tier Badges",
+      "kind": "chip",
+      "refersTo": "badge-premium",
+      "description": "Free is an outlined ring; premium is a solid drop of ink.",
+      "html": "<span class=\"ds-badge ds-badge-free\">Free</span> <span class=\"ds-badge ds-badge-premium\">Premium</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px 2px 7px; border-radius: 999px; font-family: 'Jost', 'Noto Sans', sans-serif; font-size: 0.66rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.5; border: 1px solid #0a1a33; } .ds-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; border: 1px solid currentColor; } .ds-badge-free { border-color: #aeb6c2; color: #4f5c72; } .ds-badge-premium { background: #0a1a33; color: #f6f7f9; } .ds-badge-premium::before { background: currentColor; }"
+    },
+    {
+      "name": "Ink Drop Radio",
+      "kind": "custom",
+      "description": "Language choice as a drop of ink: hairline ring, inner drop scales in when checked.",
+      "html": "<label class=\"ds-ink-lang\"><input type=\"radio\" name=\"ds-l\" checked><span class=\"ds-ink-dot\"></span>O‘zbekcha</label> <label class=\"ds-ink-lang\"><input type=\"radio\" name=\"ds-l\"><span class=\"ds-ink-dot\"></span>Русский</label>",
+      "css": ".ds-ink-lang { display: inline-flex; align-items: center; gap: 10px; margin-right: 22px; cursor: pointer; font-family: 'Jost', 'Noto Sans', sans-serif; color: #0a1a33; } .ds-ink-lang input { position: absolute; opacity: 0; width: 1px; height: 1px; } .ds-ink-dot { width: 20px; height: 20px; border-radius: 50%; border: 1px solid #0a1a33; position: relative; } .ds-ink-dot::after { content: ''; position: absolute; inset: 3px; border-radius: 50%; background: #0a1a33; scale: 0; transition: scale 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-ink-lang input:checked + .ds-ink-dot::after { scale: 1; } .ds-ink-lang:hover .ds-ink-dot { border-width: 2px; } .ds-ink-lang input:focus-visible + .ds-ink-dot { outline: 2px solid #0a1a33; outline-offset: 3px; }"
+    },
+    {
+      "name": "Template Sheet on Desk",
+      "kind": "card",
+      "description": "Paper sheet (A4 ratio, 1px corners, sheet shadow) resting on a mist desk.",
+      "html": "<div class=\"ds-desk\"><div class=\"ds-sheet\"><b></b><i></i><i></i><i></i></div></div>",
+      "css": ".ds-desk { background: #dde2e8; border-radius: 2px; padding: 28px 20%; } .ds-sheet { aspect-ratio: 210 / 297; background: #ffffff; border-radius: 1px; box-shadow: 0 1px 2px rgba(10, 26, 51, 0.08), 0 14px 30px -14px rgba(10, 26, 51, 0.35); padding: 9%; } .ds-sheet b, .ds-sheet i { display: block; height: 3px; border-radius: 2px; background: #dce1e8; margin-bottom: 5px; } .ds-sheet b { background: #0a1a33; width: 55%; height: 9px; margin-bottom: 14px; } .ds-sheet i:nth-child(3n) { width: 70%; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Suminagashi Basin",
+    "overview": "Every surface is still water with ink on it. Light, cool water is the ground; indigo ink is text, action and emphasis; the newest or most important thing is always the darkest ink. Marbling is drawn live on a Canvas 2D basin (drop and tine transforms, area-preserving) on the home hero, as a quiet still sheet behind the page heads of Templates, Dashboard and Pricing, and inverted (pale ink on indigo water) in the home close band. It settles to a static pattern under reduced motion.\n\nThe rest of the interface is spare: hairline 1px rules instead of boxes, square 2px corners, thin large Jost headlines, tracked uppercase labels, filled indigo primary and outlined secondary actions. Density is calm on marketing pages and tighter in the editor, dashboard and admin, which share the same tokens without the hero ink.",
+    "keyCharacteristics": [
+      "One hue family (indigo to water) carries the whole site; red and green appear only as status.",
+      "Ink is a live canvas medium, never a CSS gradient or a static image.",
+      "Hairline rules divide; fills and shadows are reserved for ink objects and floating sheets.",
+      "Light display weights (300) at large sizes; weight 500 only for labels, titles and actions."
+    ],
+    "rules": [
+      { "name": "The Newest Ink Rule", "body": "The most recent or most important element is the darkest ink: the active step, the selected language drop, the premium plan, the latest marbling drop.", "section": "colors" },
+      { "name": "The One Hue Rule", "body": "Outside status, nothing leaves the indigo-to-water ramp. The PDF CV templates in src/pdf/templates.jsx and their thumbnails keep their own per-template palettes; they are the product's documents, not the site's system. Only the \"Ink\" template echoes this palette.", "section": "colors" },
+      { "name": "The Thin-Large, Small-Tracked Rule", "body": "Big type is light (300); small type that labels or acts is 500, uppercase, tracked 0.16em. No bold display.", "section": "typography" },
+      { "name": "The Hairline Rule", "body": "Divide with 1px line rules; a 1px ink rule marks the head of a list or the active tab. Do not box content that a rule can separate.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do draw ink as live or still marbling through the Ink Basin; use CSS gradients only as masks that fade the canvas into water.",
+      "Do keep the darkest ink for the newest or primary element (The Newest Ink Rule).",
+      "Do use hairline rules (1px line / ink) to divide lists, plans and tables.",
+      "Do keep big type at weight 300 and small acting labels at 500, uppercase, 0.16em.",
+      "Do keep every animation on cubic-bezier(0.16, 1, 0.3, 1) and disable it under reduced motion.",
+      "Do self-host Jost and keep Noto Sans as the fallback so Cyrillic and Uzbek Latin always render."
+    ],
+    "donts": [
+      "Don't paint ink as a decorative gradient, blob image or static illustration.",
+      "Don't introduce a second accent hue; red and green are status only.",
+      "Don't round corners beyond 2px except true circles (ink objects) and pill badges/tags.",
+      "Don't use hard, dark or offset shadows; depth is the soft indigo family above.",
+      "Don't pull the PDF templates' per-template colors into site UI."
+    ]
+  }
+}
